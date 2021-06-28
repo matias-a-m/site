@@ -1,0 +1,56 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loading...</title>
+    <meta name="author" content="Matias Adrian Molina">
+    <meta name="description" content="Portfolio"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/preload.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="/js/pace.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-bez@1.0.11/src/jquery.bez.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+</head>
+
+<body>
+    <h1><a href="/home.html">WELLCOME</a></h1>
+    <p><a href="/home.html">click here</a></p>
+
+    <div id="preloader">
+        <div class="p">LOADING</div>
+    </div>
+
+    <script>
+        paceOptions = {
+            ajax: true,
+            document: true,
+            eventLag: false
+        };
+
+        Pace.on('done', function() {
+            $('.p').delay(800).animate({
+                top: '30%',
+                opacity: '0'
+            }, 2500, $.bez([0.19, 1, 0.22, 1]));
+
+
+            $('#preloader').delay(1800).animate({
+                top: '-100%'
+            }, 2000, $.bez([0.19, 1, 0.22, 1]));
+
+            TweenMax.from(".title", 2, {
+                delay: 1.8,
+                y: 10,
+                opacity: 0,
+                ease: Expo.easeInOut
+            })
+        });
+    </script>
+
+</body>
+
+</html>
