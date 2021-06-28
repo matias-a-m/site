@@ -17,6 +17,27 @@ h1 a {
     color: #fff;
 }
 
+
+@media (max-width: 768px) {
+    h1 a {
+       font-size: 25px;
+    }
+
+    p a {
+        font-size: 16px;
+    }
+}
+
+
+@media (max-width: 375px) {
+    h1 a {
+       font-size: 20px;
+    }
+    p a {
+        font-size: 12px;
+    }
+}
+
 p a {
     position: absolute;
     text-decoration: none;
@@ -85,24 +106,4 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
-}
-
-@media (max-width: 768px) {
-    h1 a {
-       font-size: 25px;
-    }
-
-    p a {
-        font-size: 16px;
-    }
-}
-
-
-@media (max-width: 375px) {
-    h1 a {
-       font-size: 20px;
-    }
-    p a {
-        font-size: 12px;
-    }
 }
