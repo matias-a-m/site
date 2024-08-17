@@ -1,105 +1,88 @@
+/* Estilos globales */
 * {
     margin: 0;
-    padding: 0%;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    font-family: 'Oxygen', sans-serif;
-    color: #fff;
-    text-decoration: none;
+    padding: 0;
+    box-sizing: border-box; /* Incluye el padding y border en el cálculo del ancho y alto de los elementos */
+    font-family: 'Oxygen', sans-serif; /* Fuente principal para el sitio */
+    color: #fff; /* Color de texto predeterminado */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
 }
 
-html,
-body {
-    overflow-x: hidden;
-    background: #000;
+html, body {
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+    background: #000; /* Color de fondo del sitio */
 }
 
+/* Contenedor principal */
 .wrapper {
     width: 100%;
     height: 100%;
 }
 
+/* Contenedor de la página */
 .wrapper .container {
     width: 96%;
-    margin: 0px auto;
-    padding: auto;
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: auto; /* Padding automático */
 }
 
+/* Separador horizontal */
 .divider {
     width: 100%;
     height: 2px;
-    background: #fff;
+    background: #fff; /* Color del separador */
 }
 
+/* Espacio en blanco */
 .whitespace {
     width: 100%;
-    height: 80px;
+    height: 80px; /* Espacio vertical */
 }
 
-span{
-    margin: 0 20px;
+/* Espaciado para elementos span */
+span {
+    margin: 0 20px; /* Espacio horizontal */
 }
 
-
-/* navbar */
-
+/* Estilos para la barra de navegación */
 .navbar .navbar-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: flex; /* Utiliza Flexbox para el diseño */
     padding: 12px 0;
     font-size: 16px;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
 }
 
 .navbar .navbar-container .site-title {
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-}
-
-.navbar .navbar-container .site-type {
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
+    flex-grow: 1; /* Ocupa el espacio disponible */
 }
 
 .navbar .navbar-container .site-year {
-    -webkit-box-flex: 2;
-    -ms-flex-positive: 2;
-    flex-grow: 2;
-    text-align: right;
+    flex-grow: 2; /* Ocupa el doble de espacio que el título */
+    text-align: right; /* Alineación a la derecha */
 }
 
-
-/* header */
-
+/* Estilos para el encabezado */
 .header {
-    float: left;
-    margin: 20% 10%;
+    float: left; /* Flota a la izquierda */
+    margin: 20% 10%; /* Espaciado superior e inferior, y horizontal */
 }
 
 .header .header-container {
     margin: 0;
-    text-align: center;
+    text-align: center; /* Centra el texto */
 }
 
 .header .header-container h1 {
-    font-family: 'Oxygen', sans-serif;
-    font-weight: 900;
-    font-size: 12rem;
+    font-weight: 900; /* Peso de fuente más grueso */
+    font-size: 12rem; /* Tamaño de fuente grande */
 }
 
 .header .header-container h4 {
-    font-size: 2rem;
-    margin: 0;
+    font-size: 2rem; /* Tamaño de fuente más pequeño para el subtítulo */
+    margin: 0; /* Sin margen */
 }
 
-
-/* hero-image */
-
+/* Estilos para la imagen de héroe */
 .hero-image {
     width: 100%;
 }
@@ -107,35 +90,26 @@ span{
 .hero-image::after {
     content: "";
     display: table;
-    clear: both;
+    clear: both; /* Limpia los elementos flotantes */
 }
 
 .hero-image .hero-image-container {
     width: 40%;
-    float: right;
+    float: right; /* Flota a la derecha */
 }
 
 .hero-image .hero-image-container img {
     width: 100%;
-    margin: 35% 10% 5% 0;
+    margin: 35% 10% 5% 0; /* Espaciado de la imagen */
 }
 
-@media screen and (max-width:1024px) {
-
-    /* header */
+/* Media Queries para pantallas más pequeñas */
+@media screen and (max-width: 1024px) {
     .header {
         margin: 20% 10%;
     }
-    .header .header-container {
-        margin: 0;
-        text-align: center;
-    }
     .header .header-container h1 {
-        font-size: 9rem;
-        margin: 0;
-    }
-    .header .header-container h4 {
-        font-size: 2rem;
+        font-size: 9rem; /* Tamaño de fuente más pequeño */
     }
     .hero-image .hero-image-container {
         width: 40%;
@@ -143,143 +117,105 @@ span{
     }
 }
 
-@media screen and (max-width:768px) {
-    /* header */
+@media screen and (max-width: 768px) {
     .header {
-        float: none;
-        text-align: center;
+        float: none; /* Elimina el flotante */
+        text-align: center; /* Centra el texto */
     }
     .header .header-container h1 {
-        font-size: 8rem;
-        margin: 0;
-    }
-    .header .header-container h4 {
-        font-weight: 900;
-        font-size: 2rem;
+        font-size: 8rem; /* Tamaño de fuente reducido */
     }
     .hero-image .hero-image-container {
         width: 100%;
-        float: none;
-        margin: 0;
-    }
-    .hero-image .hero-image-container img {
+        float: none; /* Elimina el flotante */
         margin: 0;
     }
 }
 
-@media screen and (max-width:375px) {
-
-/* header */
-    .header .header-container {
-        margin: 0;
-    }
+@media screen and (max-width: 375px) {
     .header .header-container h1 {
-        font-size: 6rem;
+        font-size: 6rem; /* Tamaño de fuente aún más pequeño */
     }
     .hero-image .hero-image-container {
         width: 100%;
-        float: none;
-        margin: 0;
-    }
-    .hero-image .hero-image-container img {
+        float: none; /* Elimina el flotante */
         margin: 0;
     }
 }
 
-
-/* about */
-
-.about{
+/* Estilos para la sección "Sobre mí" */
+.about {
     width: 100%;
 }
 
 .about::after {
     content: "";
     display: table;
-    clear: both;
+    clear: both; /* Limpia los elementos flotantes */
 }
 
 .about .about-container {
     width: 70%;
-    float: right;
+    float: right; /* Flota a la derecha */
 }
 
 .about .about-container p {
     margin: 40px 0;
-    font-size: 34px;
+    font-size: 34px; /* Tamaño de fuente para el texto */
 }
 
-
+/* Estilos para la sección de redes sociales */
 .socials {
     padding: 20px 0;
 }
 
 .socials .socials-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-around;
+    display: flex; /* Utiliza Flexbox para el diseño */
+    justify-content: space-around; /* Distribuye los elementos de manera uniforme */
 }
 
 .socials .socials-container a {
-    cursor: pointer;
-    text-decoration: none;
-    font-family: 'Oxygen', sans-serif;
-    font-size: 48px;
+    cursor: pointer; /* Cambia el cursor al pasar sobre el enlace */
+    font-size: 48px; /* Tamaño de fuente grande para los enlaces */
 }
 
+/* Media Queries para pantallas más pequeñas */
 @media (max-width: 1024px) {
-
- 
     .socials .socials-container a {
-        font-size: 34px;
+        font-size: 34px; /* Tamaño de fuente reducido */
     }
 }
 
 @media (max-width: 768px) {
-
-    /* about */
     .about .about-container p {
-        margin: 40px 0;
-        font-size: 24px;
+        font-size: 24px; /* Tamaño de fuente más pequeño para pantallas medianas */
     }
     .socials .socials-container a {
-        font-size: 20px;
+        font-size: 20px; /* Tamaño de fuente reducido */
     }
 }
 
 @media (max-width: 375px) {
-
-    /* about */
     .about .about-container p {
-        margin: 40px 0;
-        font-size: 20px;
+        font-size: 20px; /* Tamaño de fuente aún más pequeño */
     }
     .socials .socials-container a {
-        font-size: 16px;
+        font-size: 16px; /* Tamaño de fuente reducido */
     }
 }
 
-
-/* Star description */
-
+/* Estilos para el acordeón (desplegable) */
 #acordeon input {
-    display: none;
+    display: none; /* Oculta los inputs del acordeón */
 }
 
 #acordeon label {
     display: block;
     width: 10%;
-    line-height: 80px;
-    text-align: center;
-    font-size: 20px;
-    letter-spacing: 2px;
-    border-radius: 10px;
-    cursor: pointer;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+    line-height: 80px; /* Altura de línea para centrar verticalmente el texto */
+    text-align: center; /* Centra el texto */
+    font-size: 20px; /* Tamaño de fuente */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    border-radius: 10px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el label */
 }

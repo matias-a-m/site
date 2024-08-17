@@ -1,47 +1,85 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Loading...</title>
-    <meta name="author" content="Matias Adrian Molina">
-    <meta name="description" content="Portfolio"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/preload.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <title>Matías Adrián Molina - Portfolio</title>
+    
+    <!-- Meta Tags para SEO -->
+    <meta name="author" content="Matías Adrián Molina">
+    <meta name="description" content="Portfolio de Matías Adrián Molina - Desarrollador iOS y Diseñador UX con experiencia en Swift y diseño UX/UI.">
+    <meta name="keywords" content="iOS development, Swift, UX design, portfolio, Matías Adrián Molina, software development, UX Designer, iOS Developer, design portfolio">
+
+    <!-- Meta Tags de Open Graph para redes sociales -->
+    <meta property="og:title" content="Matías Adrián Molina - Portfolio" />
+    <meta property="og:description" content="Portfolio de Matías Adrián Molina - Desarrollador iOS y Diseñador UX con experiencia en Swift y diseño UX/UI." />
+    <meta property="og:image" content="images/og-image.jpg" />
+    <meta property="og:url" content="https://matiasadrianmolina.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Matías Adrián Molina - Portfolio" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Meta Tags para Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Matías Adrián Molina - Portfolio" />
+    <meta name="twitter:description" content="Portfolio de Matías Adrián Molina - Desarrollador iOS y Diseñador UX con experiencia en Swift y diseño UX/UI." />
+    <meta name="twitter:image" content="images/og-image.jpg" />
+    
+    <!-- Favicon para el ícono de la pestaña del navegador -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Preconexión para optimizar la carga de fuentes -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet" />
+    
+    <!-- Hojas de estilos para el diseño de la página -->
+    <link rel="stylesheet" href="css/preload.css" />
+    
+    <!-- Bibliotecas y scripts de JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="js/pace.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-bez@1.0.11/src/jquery.bez.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-bez@1.0.11/src/jquery.bez.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 </head>
 
 <body>
+    <!-- Título principal con un enlace a la página de inicio -->
     <h1><a href="home.html">👋 WELLCOME</a></h1>
+    <!-- Subtítulo con un enlace a la página de inicio -->
     <p><a href="home.html">click here</a></p>
 
+    <!-- Elemento de preloader para mostrar un indicador de carga -->
     <div id="preloader">
         <div class="p">LOADING</div>
     </div>
 
+    <!-- JavaScript en línea para la animación del preloader y transición de la página -->
     <script>
+        // Opciones de configuración para el indicador de carga Pace.js
         paceOptions = {
             ajax: true,
             document: true,
             eventLag: false
         };
 
+        // Acciones a realizar una vez que Pace.js haya terminado de cargar
         Pace.on('done', function() {
+            // Animar el texto del preloader para desvanecerse y moverse hacia arriba
             $('.p').delay(800).animate({
                 top: '30%',
                 opacity: '0'
             }, 2500, $.bez([0.19, 1, 0.22, 1]));
 
-
+            // Animar el contenedor del preloader para moverse fuera de la vista
             $('#preloader').delay(1800).animate({
                 top: '-100%'
             }, 2000, $.bez([0.19, 1, 0.22, 1]));
 
+            // Animar el elemento ".title" para desvanecerse y moverse hacia arriba
             TweenMax.from(".title", 2, {
                 delay: 1.8,
                 y: 10,
