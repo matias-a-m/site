@@ -6,7 +6,7 @@ Este repositorio es una vitrina de mi trabajo y un espacio para compartir mi exp
 
 - **Interfaz Atractiva**: Una experiencia de usuario dinámica con animaciones e interactividad.
 - **Diseño Adaptable**: Optimizado para que luzca genial en cualquier dispositivo, ya sea móvil o de escritorio.
-- **Proyectos Destacados**: Información sobre los proyectos en los que he trabajado, tanto en iOS como en diseño UX.
+// - **Proyectos Destacados**: Información sobre los proyectos en los que he trabajado, tanto en iOS como en diseño UX.
 - **CV Descargable**: Accede a mi currículum para conocer más sobre mi experiencia profesional.
 
 ## Tecnologías Utilizadas
